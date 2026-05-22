@@ -121,3 +121,6 @@ Synonym Identification:
 Instrument = Product
 Brand = Manufacturer
 
+Niche Products Added: expanded the bookstore app by adding a Musical Instruments category as a base class and two subclasses (Guitar and Drum).
+
+Challenges encountered: main difficulties involved resolving architectural conflicts with provided template files.
