@@ -101,3 +101,23 @@ src/
             └── bookstore/
                 └── pojos/              # Unit Tests
 ```
+
+
+Lab 1: Analysis
+
+Problem Statement:
+The Harmony Hub retail store sells high-quality musical instruments to musicians of all levels. We offer stringed instruments, percussion, and keyboards to fulfill various musical needs. Customers browse our inventory, check specifications, and purchase items from our catalog. The system tracks inventory, pricing, and specific characteristics for a seamless shopping experience.
+
+Noun/Verb Table:
+Nouns (Classes/Attributes),Verbs (Methods)
+Instrument,Sell
+Brand,Edit
+Guitar,Initialize
+Drum,Browse
+Price,Update
+Strings,Display
+
+Synonym Identification:
+Instrument = Product
+Brand = Manufacturer
+

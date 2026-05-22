@@ -1,0 +1,72 @@
+classDiagram
+    class SaleableItem {
+        <<interface>>
+        +sellItem() void
+    }
+
+    class Editable {
+        <<interface>>
+        +initialize(Scanner input) void
+        +edit(Scanner input) void
+    }
+
+    class Product {
+        <<abstract>>
+        -String title
+        -double price
+        +getTitle() String
+        +setTitle(String title) void
+        +getPrice() double
+        +setPrice(double price) void
+        +initialize(Scanner input) void
+        +edit(Scanner input) void
+    }
+
+    class MusicalInstrument {
+        <<abstract>>
+        -String brand
+        +MusicalInstrument()
+        +MusicalInstrument(String title, double price, String brand)
+        +getBrand() String
+        +setBrand(String brand) void
+        +initialize(Scanner input) void
+        +edit(Scanner input) void
+        +toString() String
+        +equals(Object o) boolean
+        +hashCode() int
+    }
+
+    class Guitar {
+        -int numberOfStrings
+        +Guitar()
+        +Guitar(String title, double price, String brand, int numberOfStrings)
+        +getNumberOfStrings() int
+        +setNumberofStrings(int numberOfStrings) void
+        +initialize(Scanner input) void
+        +edit(Scanner input) void
+        +sellItem() void
+        +toString() String
+        +equals(Object o) boolean
+        +hashCode() int
+    }
+
+    class Drum {
+        -boolean isElectronic
+        +Drum()
+        +Drum(String title, double price, String brand, boolean isElectronic)
+        +getIsElectronic() boolean
+        +setIsElectronic(boolean isElectronic) void
+        +initialize(Scanner input) void
+        +edit(Scanner input) void
+        +sellItem() void
+        +toString() String
+        +equals(Object o) boolean
+        +hashCode() int
+    }
+
+    Product ..|> Editable
+    MusicalInstrument --|> Product
+    Guitar --|> MusicalInstrument
+    Guitar ..|> SaleableItem
+    Drum --|> MusicalInstrument
+    Drum ..|> SaleableItem
