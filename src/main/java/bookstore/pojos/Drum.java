@@ -6,25 +6,21 @@ import java.util.Scanner;
 public class Drum extends MusicalInstrument {
     private boolean isElectronic;
 
-    // No-Arg Constructor
     public Drum() {
         super();
         this.isElectronic = false;
     }
 
-    // Loaded Constructor (Bucket Brigade)
     public Drum(String title, double price, String brand, boolean isElectronic) {
         super(title, price, brand);
         this.isElectronic = isElectronic;
     }
 
-    // Fixed SaleableItem Interface Error: Added getPrice requirement
     @Override
     public double getPrice() {
-        return super.getPrice();
+        return getPrice();
     }
 
-    // Getters and Setters
     public boolean getIsElectronic() {
         return isElectronic;
     }

@@ -6,25 +6,21 @@ import java.util.Scanner;
 public class Guitar extends MusicalInstrument {
     private int numberOfStrings;
 
-    // No-Arg Constructor
     public Guitar() {
         super();
         this.numberOfStrings = 6;
     }
 
-    // Loaded Constructor (Bucket Brigade)
     public Guitar(String title, double price, String brand, int numberOfStrings) {
         super(title, price, brand);
         this.numberOfStrings = numberOfStrings;
     }
 
-    // Fixed SaleableItem Interface Error: Added getPrice requirement
     @Override
     public double getPrice() {
-        return super.getPrice();
+        return getPrice();
     }
 
-    // Getters and Setters
     public int getNumberOfStrings() {
         return numberOfStrings;
     }
@@ -52,7 +48,7 @@ public class Guitar extends MusicalInstrument {
 
     @Override
     public void sellItem() {
-        System.out.println("Guitar sold successfully!");
+        System.out.println("Tuning strings and processing sale for Guitar...");
     }
 
     @Override

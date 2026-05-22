@@ -13,6 +13,10 @@ public class App {
     private CashTill cashTill = new CashTill();
     private Scanner input = new Scanner(System.in);
 
+    public static void main(String[] args) {
+        new App().run();
+    }
+
     public void run() {
         populate();
         int choice = 0;
@@ -95,7 +99,6 @@ public class App {
             }
 
             if(item instanceof Editable) {
-                // PASS THE SHARED SCANNER
                 ((Editable)item).initialize(this.input);
             }
 
@@ -189,7 +192,6 @@ public class App {
     }
 
     public void editItem(Editable item) {
-        // PASS THE SHARED SCANNER
         item.edit(this.input);
     }
 
